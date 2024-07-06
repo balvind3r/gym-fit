@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Genos:ital,wght@0,100..900;1,100..900&family=Geostar&family=Geostar+Fill&display=swap");
+
+@font-face {
+    font-family: "GenosFont";
+    src: url("/Fonts/Genos/Genos-VariableFont_wght.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GenosBold";
+    src: url("/Fonts/Genos/Genos-VariableFont_wght.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Geostar";
+    src: url("/Fonts/Geostar/Geostar-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GeostarFill";
+    src: url("/Fonts/Geostar/GeostarFill-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+html, body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+html, body {
+  overflow: auto; /* Ensure scrolling is enabled */
+  height: 100%;
+}
+
+html{
+  background-color: #f3f3f4;
+}
+
+:root {
+    --foreground-rgb: #f7eaea;
+}
+
+.genos {
+  font-family: "GenosFont", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.genosBold {
+  font-family: "GenosFont", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.geostar-regular {
+  font-family: "Geostar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.geostar-fill-regular {
+  font-family: "GeostarFill", serif;
+  font-weight: 400;
+  font-style: normal;
+}
