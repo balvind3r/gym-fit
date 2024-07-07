@@ -78,7 +78,7 @@ const Search : React.FC<SearchProps> = ({ setExercises, bodyPart, setBodyPart}) 
     
     <div className="genosBold flex flex-col justify-center items-center mx-auto">
       <p className="mt-12 text-2xl  lg:mt-20 lg:text-4xl">
-        What's your next workout gonna be?
+        What&apos;s your next workout gonna be?
       </p>
       <div className="mt-4 w-[90vw] md:mt-8 md:w-[70vw] lg:mt-8 lg:w-2/3">
         <Placeholder

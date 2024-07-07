@@ -70,34 +70,41 @@ export const Navbar = () => {
     >
       <img
         src="/Assets/images/Logo.png"
-        alt="image"
+        alt="asset"
         className="w-12 h-12 mx-3 lg:mx-8 "
       />
 
       <div className="flex genos flex-auto justify-start gap-3 lg:gap-6 items-center text-2xl lg:text-3xl">
-        <a
-          href="#"
-          className={activeLink === "Home" ? "text-[#d1212f]" : ""}
-          onClick={() => handleLinkClick("Home")}
-        >
-          Home
-        </a>
-        <a
-        href="#exercise"
-        className={`  transition-colors duration-300 ${
-          activeLink === "Exercises" ? "text-[#d1212f]" : ""
-        }`}
-        onClick={(e) => {
+        <div onClick={() => handleLinkClick("Home")}>
+
+          <a
+            href="#"
+            className={activeLink === "Home" ? "text-[#d1212f]" : ""}
+            
+          >
+            Home
+          </a>
+        </div>
+
+        <div onClick={(e) => {
           e.preventDefault();
           handleLinkClick("Exercises");
           const element = document.getElementById("exercise");
           if (element) {
             element.scrollIntoView({ behavior: "smooth" });
           }
-        }}
-      >
-         Exercises
-         </a>
+        }}>
+
+          <a
+          href="#exercise"
+          className={`  transition-colors duration-300 ${
+            activeLink === "Exercises" ? "text-[#d1212f]" : ""
+          }`}
+          
+        >
+          Exercises
+          </a>
+        </div>
 
         {/* <ThemeSwitch /> */}
       </div>

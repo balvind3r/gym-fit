@@ -12,7 +12,7 @@ const Footer = () => {
       <p className='text-xl md:text-2xl lg:text-3xl'>Gym-ify</p>
         </div>
 
-        <img src="/Assets/images/FooterAuthor.png" alt="" className='w-72 mb-4' />
+        <img src="/Assets/images/FooterAuthor.png" alt="asset" className='w-72 mb-4' />
     </div>
   )
 }
