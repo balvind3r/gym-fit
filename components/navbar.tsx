@@ -75,7 +75,7 @@ export const Navbar = () => {
       />
 
       <div className="flex genos flex-auto justify-start gap-3 lg:gap-6 items-center text-2xl lg:text-3xl">
-        <div onClick={() => handleLinkClick("Home")}>
+        {/* <div onClick={() => handleLinkClick("Home")}> */}
 
           <a
             href="#"
@@ -84,16 +84,16 @@ export const Navbar = () => {
           >
             Home
           </a>
-        </div>
+        {/* </div> */}
 
-        <div onClick={(e) => {
+        {/* <div onClick={(e) => {
           e.preventDefault();
           handleLinkClick("Exercises");
           const element = document.getElementById("exercise");
           if (element) {
             element.scrollIntoView({ behavior: "smooth" });
           }
-        }}>
+        }}> */}
 
           <a
           href="#exercise"
@@ -104,7 +104,7 @@ export const Navbar = () => {
         >
           Exercises
           </a>
-        </div>
+        {/* </div> */}
 
         {/* <ThemeSwitch /> */}
       </div>
