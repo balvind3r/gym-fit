@@ -38,7 +38,7 @@ function BodyPart(props: Props) {
       }
       onClick={() => {
         setBodyPart(item);
-        // window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
+        window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
     >
         <div className="flex flex-col items-center justify-center">

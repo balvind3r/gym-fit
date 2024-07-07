@@ -39,9 +39,9 @@ export default function Home() {
         </div>
         {/* <div id="exercises"> */}
           <Exercises
-            // setExercises={setExercises}
-            // bodyPart={bodyPart}
-            // setBodyPart={setbodyPart}
+            exercises={exercises}
+            setExercises={setExercises}
+            bodyPart={bodyPart}
           />
         {/* </div> */}
         <Footer />

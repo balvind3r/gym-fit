@@ -25,7 +25,7 @@ const RightArrow = () => {
   const { scrollNext } = useContext(VisibilityContext);
 
   return (
-    <Typography onClick={() => scrollNext()} className="flex flex-col justify-center items-center lg:w-12 ursor-pointer mr-2">
+    <Typography onClick={() => scrollNext()} className="flex flex-col justify-center items-center lg:w-12 cursor-pointer mr-2">
       <KeyboardDoubleArrowRightIcon className="w-12 h-12"/>
     </Typography>
   );
