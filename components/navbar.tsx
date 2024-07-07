@@ -78,7 +78,7 @@ export const Navbar = () => {
         {/* <div onClick={() => handleLinkClick("Home")}> */}
 
           <a
-            href="#"
+            href="/"
             className={activeLink === "Home" ? "text-[#d1212f]" : ""}
             
           >
