@@ -53,6 +53,7 @@
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"react-horizontal-scrolling-menu": "^7.1.1",
+		"react-loader-spinner": "^6.1.6",
 		"react-scroll": "^1.9.0",
 		"tailwind-merge": "^2.3.0",
 		"tailwind-variants": "^0.1.20",

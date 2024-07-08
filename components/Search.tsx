@@ -12,12 +12,6 @@ import HeroExercises from "./HeroExercises";
 import { BodyPartList_Local, Exercise, Exercises_Local } from "@/utils";
 const axios = require("axios");
 
-// interface SearchProps {
-//   setExercises: (exercises: string) => void;
-//   bodyPart: string;
-//   setBodyPart: (bodyPart: string) => void;
-// }
-
 interface SearchProps {
   setExercises: any;
   bodyPart: string;
@@ -25,31 +19,9 @@ interface SearchProps {
 }
 
 const Search : React.FC<SearchProps> = ({ setExercises, bodyPart, setBodyPart}) => {
-  // const Search = ({ setExercises:String, bodyPart:string, setBodyPart }) => {
   const [search, setSearch] = useState("");
-  // const [exercises, setExercises] = useState([]);
-  // const [exercises, setExercises] = useState<Exercise[]>([]);
   const [bodyParts, setBodyParts] = useState<string[]>([]);
 
-  // useEffect(() => {
-  //   const fetchExercisesData = async () => {
-  //     // COMMENT FOR API CALL
-  //     try{
-  //       const bodyPartsData = BodyPartList_Local;
-  //       setBodyParts(["all", ...bodyPartsData]);
-  //     }
-  //     // // UNCOMMENT FOR API CALL
-  //     // try {
-  //     //   const bodyPartsData = await axios.request(getBodyPartList);
-  //     //   setBodyParts(["all", ...bodyPartsData.data]);
-  //     // } 
-  //     catch (error) {
-  //       console.error("Error fetching bodypart data:", error);
-  //     }
-  //   };
-
-  //   fetchExercisesData();
-  // }, []);
   const handleSearch = async () => {
     if (search) {
       try {
@@ -58,7 +30,7 @@ const Search : React.FC<SearchProps> = ({ setExercises, bodyPart, setBodyPart}) 
         // const exercisesData = response.data; // Accessing the data property
         const exercisesData: Exercise[] = Exercises_Local;
         const searchedExercises = exercisesData.filter(
-          (exercise: any) =>
+          (exercise: Exercise) =>
             exercise.name.toLowerCase().includes(search) ||
             exercise.target.toLowerCase().includes(search) ||
             exercise.equipment.toLowerCase().includes(search) ||
@@ -67,17 +39,24 @@ const Search : React.FC<SearchProps> = ({ setExercises, bodyPart, setBodyPart}) 
 
         setSearch("");
         setExercises(searchedExercises);
-        console.log(searchedExercises);
+
+        // Scroll to exercises component
+        const exercisesElement = document.getElementById("horizontal-scroll");
+        if (exercisesElement) {
+          exercisesElement.scrollIntoView({ behavior: "smooth" });
+        }
+        // console.log(searchedExercises);
       } catch (error) {
         console.error("Error fetching exercises data:", error);
       }
+
     }
   };
   return (
     <>
     
     <div className="genosBold flex flex-col justify-center items-center mx-auto">
-      <p className="mt-12 text-2xl  lg:mt-20 lg:text-4xl">
+      <p className="mt-12 text-2xl md:w-full w-[60vw] text-center lg:mt-20 lg:text-4xl">
         What&apos;s your next workout gonna be?
       </p>
       <div className="mt-4 w-[90vw] md:mt-8 md:w-[70vw] lg:mt-8 lg:w-2/3">
@@ -88,10 +67,6 @@ const Search : React.FC<SearchProps> = ({ setExercises, bodyPart, setBodyPart}) 
         />
       </div>
       </div>
-      
-      {/* <div className="">
-        <HeroExercises  bodyPart = {bodyPart} setBodyPart = {setBodyPart}/>
-      </div> */}
       </>
   );
 };

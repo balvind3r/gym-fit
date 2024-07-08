@@ -12,41 +12,25 @@ function BodyPart(props: Props) {
   const { item, bodyPart, setBodyPart } = props;
 
   return (
-    <Stack
-      alignItems={`center`}
-      justifyContent={`center`}
-      className="left-10"
-      sx={
-        bodyPart === item
-          ? {
-              borderTop: "4px solid #FF2625",
-              background: "#fff3f4",
-              borderBottomLeftRadius: "20px",
-              width: "160px",
-              height: "160px",
-              cursor: "pointer",
-              gap: "87px",
-            }
-          : {
-              background: "#f3f3f4",
-              borderBottomLeftRadius: "20px",
-              width: "160px",
-              height: "160px",
-              cursor: "pointer",
-              gap: "47px",
-            }
-      }
-      onClick={() => {
-        setBodyPart(item);
-        window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
-      }}
-    >
-        <div className="flex flex-col items-center justify-center">
-            <img src={`/Assets/icons/HeroExercises/${item}.png`} alt={item} className="h-20"/>
-            <Typography fontSize="24px" fontWeight="bold" fontFamily="GenosBold" color="#3A1212" textTransform="capitalize" className="mt-4"> {item}</Typography>
+    <div className="">
+      <Stack
+        alignItems="center"
+        justifyContent="center"
+        className={`left-10 ${bodyPart === item ? "border-t-4 border-[#FF2625] bg-[#fff3f4]" : "bg-[#f3f3f4]"} 
+                    cursor-pointer rounded-bl-3xl gap-20 md:w-40 md:h-40 w-32 h-32`}
+        onClick={() => {
+          setBodyPart(item);
+          window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
+        }}
+      >
+        <div className="flex flex-col items-center justify-center md:w-40 md:h-40 w-40 h-40">
+          <img src={`/Assets/icons/HeroExercises/${item}.png`} alt={item} className="md:h-20 h-16" />
+          <div className="md:text-2xl text-lg font-[GenosBold] font-bold capitalize md:mt-4 mt-3">
+            {item}
+          </div>
         </div>
-      {/* <img src={all.src} alt={item} /> */}
-    </Stack>
+      </Stack>
+    </div>
   );
 }
 

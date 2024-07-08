@@ -26,6 +26,14 @@ export const getBodyPartList = {
   }
 }
 
+export const youtubeOptions = {
+  method: 'GET',
+  url: 'https://youtube-search-and-download.p.rapidapi.com/video/related',
+  headers: {
+    'x-rapidapi-key': process.env.REACT_APP_RAPID_API_KEY,
+    'x-rapidapi-host': 'youtube-search-and-download.p.rapidapi.com'
+  }
+};
 // const req = http.request(options, function (res) {
 // 	const chunks = [];
 

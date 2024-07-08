@@ -13,16 +13,18 @@ import HeroExercises from "@/components/HeroExercises";
 import { BodyPartList_Local, Exercise, Exercises_Local } from "@/utils";
 import { useState } from "react";
 import Exercises from "@/components/Exercises";
-import { Navbar } from "@nextui-org/navbar";
+// import { Navbar } from "@nextui-org/navbar";
 import "@/styles/globals.css"
-// import  Navbar  from "@/components/navbar";
+import  {Navbar}  from "@/components/navbar";
 
 export default function Home() {
   const [exercises, setExercises] = useState<Exercise[]>([]);
   const [bodyPart, setBodyPart] = useState("all");
+  // console.log(bodyPart);
+  
   return (
     <div>
-      <div className="overflow-scroll w-full min-h-screen">
+      <div className="w-full min-h-screen">
         {/* <Navbar/> */}
         <Hero />
         <div id="exercise">
@@ -34,7 +36,7 @@ export default function Home() {
         />
         </div>
         {/* <HeroExercises/> */}
-        <div className=" my-20 scrollbar-hide" id="horizontal">
+        <div className=" my-20 " id="horizontal">
         <HeroExercises  bodyPart = {bodyPart} setBodyPart = {setBodyPart}/>
         </div>
         {/* <div id="exercises"> */}

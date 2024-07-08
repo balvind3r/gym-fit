@@ -30,26 +30,7 @@ import { fontGenos } from "@/config/fonts";
 import { useState } from "react";
 
 export const Navbar = () => {
-  // const searchInput = (
-  //   <Input
-  //     aria-label="Search"
-  //     classNames={{
-  //       inputWrapper: "bg-default-100",
-  //       input: "text-sm",
-  //     }}
-  //     endContent={
-  //       <Kbd className="hidden lg:inline-block" keys={["command"]}>
-  //         K
-  //       </Kbd>
-  //     }
-  //     labelPlacement="outside"
-  //     placeholder="Search..."
-  //     startContent={
-  //       <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-  //     }
-  //     type="search"
-  //   />
-  // );
+
 
   const handleButtonClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -82,7 +63,7 @@ export const Navbar = () => {
             className={activeLink === "Home" ? "text-[#d1212f]" : ""}
             
           >
-            Home
+            GymFyt
           </a>
         {/* </div> */}
 
@@ -93,18 +74,18 @@ export const Navbar = () => {
           if (element) {
             element.scrollIntoView({ behavior: "smooth" });
           }
-        }}> */}
+        }}>
 
           <a
           href="#exercise"
           className={`  transition-colors duration-300 ${
-            activeLink === "Exercises" ? "text-[#d1212f]" : ""
+            activeLink === "Exercises" ? "" : ""
           }`}
           
         >
           Exercises
           </a>
-        {/* </div> */}
+        </div> */}
 
         {/* <ThemeSwitch /> */}
       </div>

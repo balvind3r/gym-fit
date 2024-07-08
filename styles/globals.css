@@ -29,15 +29,17 @@
     font-style: normal;
 }
 
-/* Hide scrollbar for Chrome, Safari, and Opera */
-::-webkit-scrollbar {
-  display: none;
+/* Hide horizontal scrollbar for react-horizontal-scrolling-menu */
+.react-horizontal-scrolling-menu--scroll-container {
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  position: relative;
 }
 
-/* Hide scrollbar for IE, Edge, and Firefox */
-html, body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+/* Ensure child elements can still scroll horizontally */
+
+/* For WebKit browsers (Chrome, Safari, Opera) */
+.react-horizontal-scrolling-menu--scroll-container > *::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
 }
 
 html, body {
@@ -65,6 +67,24 @@ html{
   font-weight: 500;
   font-style: normal;
 }
+.genos500 {
+  font-family: "GenosFont", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.genos600 {
+  font-family: "GenosFont", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.genos700 {
+  font-family: "GenosFont", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
 .geostar-regular {
   font-family: "Geostar", serif;
@@ -76,4 +96,19 @@ html{
   font-family: "GeostarFill", serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.exercise-card {
+  /* width: 400px;
+  /* height: 445px; */
+  background: #fff;
+  border-top: 4px solid #FF2625;
+  border-bottom-left-radius: 20px;
+  /* text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column; */
+  padding-bottom: 10px;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
 }

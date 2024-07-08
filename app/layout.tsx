@@ -1,14 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
-import clsx from "clsx";
-
 import { Providers } from "./providers";
-
 import { siteConfig } from "@/config/site";
 import { fontGenos, fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import "@/styles/globals.css"
+import "@/styles/globals.css";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -16,7 +13,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
+    icon: "/Assets/images/Logo.png", // Path to your favicon
   },
 };
 
@@ -34,17 +31,16 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="en" className="bg-[#f3f3f4]">
-      <head />
+      <head>
+        <link rel="icon" href="/Assets/images/Logo.png" /> {/* Link to your favicon */}
+      </head>
       <body
-        className={
-          `"min-h-screen bg-inherit  m-0 p-0",
-          ${fontGenos.variable}`
-        }
-        >
+        className={`min-h-screen bg-inherit w-full m-0 p-0" ${fontGenos.variable}`}
+      >
         <Providers themeProps={{ attribute: "class", defaultTheme: "light" }}>
           <div className="">
-          <Navbar/>
-            <main className="w-[100vw]">
+            <Navbar/>
+            <main className="">
               {children}
             </main>
           </div>
