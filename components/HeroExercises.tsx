@@ -61,12 +61,16 @@ const HeroExercises: React.FC<HeroExercisesProps> = ({ bodyPart, setBodyPart }) 
         </ScrollMenu>
       </div>
       <div className="md:hidden">
-          <div className="flex flex-row overflow-x-scroll scrollbar-hide mt-0 mx-5">
+          <div className="flex flex-row justify-center items-center w-full mt-0 ">
+          <KeyboardDoubleArrowLeftIcon className="w-12 h-12 " />
+          <div className="flex flex-row overflow-scroll w-[70vw] scrollbar-hide">
           {bodyParts.map((item, index) => (
             <div key={index.toString()} style={{ margin: '0 10px' }}>
               <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
             </div>
           ))}
+          </div>
+          <KeyboardDoubleArrowRightIcon className="w-12 h-12" />
           </div>
       </div>
     </div>

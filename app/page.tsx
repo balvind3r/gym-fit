@@ -46,7 +46,7 @@ export default function Home() {
             bodyPart={bodyPart}
           />
         {/* </div> */}
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </div>
     // <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">

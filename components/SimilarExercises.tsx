@@ -23,8 +23,8 @@ function SimilarExercises(props: Props) {
   return (
     <div>
       <div className="mt-[100px] lg:mt-0">
-        <div className="flex flex-col justify-center items-center text-center">
-          <div className="text-[#000] font-extrabold genos700 text-[25px] lg:text-[44px] ml-[20px] mb-[33px]">
+        <div className="flex flex-col justify-center items-center text-center ">
+          <div className="text-[#000] font-extrabold genos700 text-[25px] lg:text-[44px] ml-[20px] mb-[33px] max-lg:-mt-10">
             Similar{" "}
             <span className="text-[#FF2625] capitalize">Target Muscle</span>{" "}
             exercises
@@ -38,7 +38,7 @@ function SimilarExercises(props: Props) {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center text-center">
-          <div className="text-[#000] font-extrabold genos700 text-[25px] lg:text-[44px] ml-[20px] mt-[60px] lg:mt-[100px] mb-[33px]">
+          <div className="text-[#000] font-extrabold genos700 text-[25px] lg:text-[44px] ml-[20px] mt-0 lg:mt-[30px] mb-[33px]">
             Similar <span className="text-[#FF2625] capitalize">Equipment</span>{" "}
             exercises
           </div>

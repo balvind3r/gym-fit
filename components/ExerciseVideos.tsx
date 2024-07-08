@@ -30,7 +30,7 @@ function ExerciseVideos(props: Props) {
           Watch <span className="text-[#FF2625] capitalize">{name}</span>{" "}
           exercise videos
         </div>
-        <div className="flex flex-wrap justify-start items-center lg:flex-row lg:gap-[110px] gap-[0px]">
+        <div className="flex w-full flex-col mx-3 justify-between items-center lg:flex-row">
           {exerciseVideos?.slice(0, 3)?.map((item: any, index: any) => (
             <a
               key={index}
@@ -40,12 +40,12 @@ function ExerciseVideos(props: Props) {
               rel="noreferrer"
             >
               <img
-                className="rounded-tl-[20px] lg:w-96 w-full"
+                className="rounded-tl-[20px] w-[30vw] "
                 src={item.video.thumbnails[0].url}
                 alt={item.video.title}
               />
               <div>
-                <div className="text-[#000] font-bold genos600 lg:w-96 w-full line-clamp-1 text-[20px] lg:text-[30px]">
+                <div className="text-[#000] font-bold genos600  w-[30vw] line-clamp-1 text-[20px] lg:text-[30px]">
                   {item.video.title}
                 </div>
                 <div className="text-[#000] genos500 text-[20px] mb-5">

@@ -49,11 +49,15 @@ export const Navbar = () => {
     <div
       className={` top-5 mt-5 h-full w-full flex flex-row items-center text ${fontGenos}`}
     >
-      <img
-        src="/Assets/images/Logo.png"
-        alt="asset"
-        className="w-12 h-12 mx-3 lg:mx-8 "
-      />
+      <a href="/">
+
+        <img
+          src="/Assets/images/Logo.png"
+          alt="asset"
+          className="w-12 h-12 mx-3 lg:mx-8 "
+          
+        />
+      </a>
 
       <div className="flex genos flex-auto justify-start gap-3 lg:gap-6 items-center text-2xl lg:text-3xl">
         {/* <div onClick={() => handleLinkClick("Home")}> */}
