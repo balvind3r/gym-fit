@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Gym-ify",
+  name: "Gym-Fyt",
   description: "Focus more on lifting and less on ideating.",
   navItems: [
     {
