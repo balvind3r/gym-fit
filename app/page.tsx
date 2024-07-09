@@ -3,7 +3,8 @@ import { Link } from "@nextui-org/link";
 import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
-
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { siteConfig } from "@/config/site";
 
 import Hero from "@/components/Hero";
@@ -48,6 +49,8 @@ export default function Home() {
         {/* </div> */}
         {/* <Footer /> */}
       </div>
+      <Analytics/>
+      <SpeedInsights/>
     </div>
     // <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
     //   <div className="inline-block max-w-lg text-center justify-center">
