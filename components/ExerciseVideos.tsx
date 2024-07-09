@@ -40,7 +40,7 @@ function ExerciseVideos(props: Props) {
               rel="noreferrer"
             >
               <img
-                className="rounded-tl-[20px] w-[30vw] "
+                className="rounded-tl-[20px] w-[30vw] sm:w-[80vw]"
                 src={item.video.thumbnails[0].url}
                 alt={item.video.title}
               />
