@@ -15,7 +15,7 @@ function ExerciseCard(props: Props) {
   return (
     // <div className="flex flex-col justify-between items-center mb-10 ">
     <Link href={`/exercise/${exercise.id}`}>
-    <div className="max-sm:mb-8 md:-mt-10 -mt-7">
+    <div className="max-sm:mb-8 ">
       <div className="exercise-card ">
         <img
           src={exercise.gifUrl}
