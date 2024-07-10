@@ -38,7 +38,7 @@ const ExerciseDetails = ({ params }: Props) => {
       if (exerciseDetailData != null) {
 
         try {
-            console.log('API Key:', process.env.REACT_APP_RAPID_API_KEY);
+            // console.log('API Key:', process.env.REACT_APP_RAPID_API_KEY);
             const response = await axios.get(`${youtubeSearchUrl}/search`, {
                 params: { query: `${exerciseDetailData.name} exercise` },
                 headers: {
