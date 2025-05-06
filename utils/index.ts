@@ -22,8 +22,7 @@ export interface Exercise {
 }
 
 // Define the Exercises_Local array with type Exercise[]
-export const Exercises_Local: Exercise[] = 
-[
+export const Exercises_Local: Exercise[] =[
     {
         "bodyPart": "waist",
         "equipment": "body weight",
